@@ -42,7 +42,8 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(147, 55);
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.lblTitulo.Location = new System.Drawing.Point(122, 45);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(255, 28);
             this.lblTitulo.TabIndex = 0;
@@ -81,15 +82,17 @@
             this.txbAltura.Name = "txbAltura";
             this.txbAltura.Size = new System.Drawing.Size(108, 20);
             this.txbAltura.TabIndex = 4;
+            this.txbAltura.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbAltura_KeyDown);
             // 
             // btnClacular
             // 
+            this.btnClacular.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnClacular.Location = new System.Drawing.Point(71, 251);
             this.btnClacular.Name = "btnClacular";
             this.btnClacular.Size = new System.Drawing.Size(176, 35);
             this.btnClacular.TabIndex = 5;
             this.btnClacular.Text = "Calcular";
-            this.btnClacular.UseVisualStyleBackColor = true;
+            this.btnClacular.UseVisualStyleBackColor = false;
             this.btnClacular.Click += new System.EventHandler(this.btnClacular_Click);
             // 
             // lblResultado
@@ -98,23 +101,24 @@
             this.lblResultado.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultado.Location = new System.Drawing.Point(67, 307);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(78, 21);
+            this.lblResultado.Size = new System.Drawing.Size(40, 21);
             this.lblResultado.TabIndex = 6;
-            this.lblResultado.Text = "Resultado";
+            this.lblResultado.Text = "IMC:";
             // 
             // lblSaude
             // 
             this.lblSaude.AutoSize = true;
-            this.lblSaude.Location = new System.Drawing.Point(71, 354);
+            this.lblSaude.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaude.Location = new System.Drawing.Point(67, 341);
             this.lblSaude.Name = "lblSaude";
-            this.lblSaude.Size = new System.Drawing.Size(0, 13);
+            this.lblSaude.Size = new System.Drawing.Size(0, 21);
             this.lblSaude.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 445);
+            this.ClientSize = new System.Drawing.Size(481, 424);
             this.Controls.Add(this.lblSaude);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.btnClacular);
@@ -123,6 +127,7 @@
             this.Controls.Add(this.lblAltura);
             this.Controls.Add(this.lblPeso);
             this.Controls.Add(this.lblTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora de IMC";

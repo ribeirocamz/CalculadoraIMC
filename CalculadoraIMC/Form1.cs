@@ -100,5 +100,15 @@ namespace CalculadoraIMC
                 txbAltura.ForeColor = Color.Black;
             }
         }
+
+        //Ao pressionar a tecla enter, o botâo calcular 
+        //será "Pressionado"
+        private void txbAltura_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnClacular.PerformClick();
+            }
+        }
     }
 }
